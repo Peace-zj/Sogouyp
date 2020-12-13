@@ -1,0 +1,540 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "小明",
+      "password": "123456"
+    },
+    {
+      "name": "小白",
+      "password": "qwerty",
+      "id": 4
+    },
+    {
+      "name": "赵四",
+      "password": "asdasd",
+      "id": 5
+    },
+    {
+      "name": "张三",
+      "password": "123123",
+      "id": 6
+    },
+    {
+      "name": "小周",
+      "password": "zxczxc",
+      "id": 7
+    }
+  ],
+  "mods": [
+    {
+      "template": "sliderBanner",
+      "title": "轮播图",
+      "list": [
+        {
+          "img": "//mall03.sogoucdn.com/image/2020/11/01/20201101093543_5703.png",
+          "link": "/pages/detail/detail?id=35372"
+        },
+        {
+          "img": "//mall03.sogoucdn.com/image/2020/06/11/20200611114433_4614.png",
+          "link": "/pages/detail/detail?id=17658"
+        },
+        {
+          "img": "//mall02.sogoucdn.com/image/2020/08/21/20200821103840_5187.png",
+          "link": "/pages/detail/detail?id=34777"
+        },
+        {
+          "img": "//mall02.sogoucdn.com/image/2020/06/11/20200611105559_4609.png",
+          "link": "/pages/detail/detail?id=34093"
+        },
+        {
+          "img": "//mall02.sogoucdn.com/image/2020/09/30/20200930174630_5634.png",
+          "link": "/pages/detail/topic?name=jkhd914h5"
+        },
+        {
+          "img": "//mall01.sogoucdn.com/image/2020/06/11/20200611112014_4610.png",
+          "link": "/pages/detail/detail?id=33946"
+        },
+        {
+          "img": "//mall01.sogoucdn.com/image/2020/06/11/20200611115106_4621.png",
+          "link": "/pages/detail/detail?id=31269"
+        }
+      ]
+    },
+    {
+      "template": "category",
+      "title": "分类模块",
+      "list": [
+        {
+          "name": "优惠商品",
+          "img": "//mall01.sogoucdn.com/image/2020/06/11/20200611133451_4637.png",
+          "link": "/pages/jd-union/list"
+        },
+        {
+          "name": "畅销爆款",
+          "img": "//mall03.sogoucdn.com/image/2020/06/11/20200611133418_4634.png",
+          "link": "/pages/cate/cate-list?id=0"
+        },
+        {
+          "name": "AI录音笔",
+          "img": "//mall01.sogoucdn.com/image/2020/06/11/20200611133335_4632.png",
+          "link": "/pages/cate/cate-list?id=57"
+        },
+        {
+          "name": "糖猫手表",
+          "img": "//mall03.sogoucdn.com/image/2020/06/11/20200611133319_4631.png",
+          "link": "/pages/cate/cate-list?id=59"
+        },
+        {
+          "name": "糖猫词典笔",
+          "img": "//mall03.sogoucdn.com/image/2020/06/11/20200611133429_4635.png",
+          "link": "/pages/detail/detail?id=34093"
+        },
+        {
+          "name": "智能配件",
+          "img": "//mall02.sogoucdn.com/image/2020/06/11/20200611133459_4638.png",
+          "link": "/pages/cate/cate-list?id=63"
+        },
+        {
+          "name": "搜狗S码",
+          "img": "//mall01.sogoucdn.com/image/2020/06/11/20200611133408_4633.png",
+          "link": "/pages/uc-scode/index"
+        },
+        {
+          "name": "全部商品",
+          "img": "//mall01.sogoucdn.com/image/2020/06/11/20200611133443_4636.png",
+          "link": "/pages/cate/cate-home"
+        }
+      ]
+    },
+    {
+      "template": "product-B",
+      "title": "新品首发",
+      "list": [
+        {
+          "productType": "0",
+          "id": "35372",
+          "name": "搜狗AI录音笔E2",
+          "desc": "8麦阵列全方位超强拾音 录音转写准确率98% 800万像素 63种语言翻译超越翻译机",
+          "img": "//mall01.sogoucdn.com/image/2020/10/21/20201021105028_5683.png",
+          "label": "",
+          "tagPos": "center",
+          "color": "#ffffff",
+          "price": "1998",
+          "linePrice": "1998",
+          "goodCommentsShare": "95%"
+        },
+        {
+          "productType": "0",
+          "id": "34777",
+          "name": "搜狗AI录音笔C1 Max",
+          "desc": "独家免费激光镌刻服务 AI录音笔+AI麦克风一机两用 4麦阵列 超强拾音 AI降噪 Vlog利器 10种语言+10种中文方言",
+          "img": "//mall02.sogoucdn.com/image/2020/08/21/20200821103925_5189.png",
+          "label": "",
+          "tagPos": "left",
+          "color": "#000000",
+          "price": "798",
+          "linePrice": "798",
+          "goodCommentsShare": "95%"
+        },
+        {
+          "productType": "0",
+          "id": "34093",
+          "name": "糖猫词典笔",
+          "desc": "学习英语、语文 查生词听泛读练口语学成语 随身翻译官 多行识别 绘本教材都能扫 课堂录音",
+          "img": "//mall03.sogoucdn.com/image/2020/06/11/20200611135239_4641.png",
+          "label": "",
+          "tagPos": "center",
+          "color": "#054d4e",
+          "price": "799",
+          "linePrice": "799",
+          "goodCommentsShare": "98%"
+        },
+        {
+          "productType": "0",
+          "id": "31269",
+          "name": "搜狗AI录音笔S1",
+          "desc": "罗永浩推荐爆款 超越专业翻译机 9种语言离线翻译 8麦克风超强拾音 录音实时转写文字准确率98%",
+          "img": "//mall01.sogoucdn.com/image/2020/06/11/20200611134955_4640.png",
+          "label": "",
+          "tagPos": "left",
+          "color": "#ffffff",
+          "price": "2698",
+          "linePrice": "2698",
+          "goodCommentsShare": "100%"
+        },
+        {
+          "productType": "0",
+          "id": "33946",
+          "name": "搜狗糖猫A10",
+          "desc": "4G全网通 1.54英寸大屏 超长待机 多重定位 AI学习 可以学习的视频电话手表",
+          "img": "//mall01.sogoucdn.com/image/2020/06/11/20200611135424_4642.png",
+          "label": "",
+          "tagPos": "center",
+          "color": "#900018",
+          "price": "399",
+          "linePrice": "399",
+          "goodCommentsShare": "98%"
+        }
+      ]
+    },
+    {
+      "template": "product-double-B",
+      "title": "超值特惠",
+      "list": [
+        {
+          "productType": "0",
+          "id": "17658",
+          "name": "搜狗AI录音笔C1 语音转文字",
+          "desc": "高清录音 晒单送充电宝",
+          "img": "//mall01.sogoucdn.com/image/2019/03/11/20190311124239_4553.jpg",
+          "label": "性价比之王",
+          "tagPos": "left",
+          "color": "",
+          "price": "398",
+          "linePrice": "398",
+          "goodCommentsShare": "99%"
+        },
+        {
+          "productType": "0",
+          "id": "29153",
+          "name": "搜狗AI录音笔C1 Pro 专业高清降噪大内存",
+          "desc": "方言转写 WiFi快传",
+          "img": "//mall02.sogoucdn.com/image/2019/12/10/20191210105740_2530.jpg",
+          "label": "升级大内存",
+          "tagPos": "center",
+          "color": "",
+          "price": "598",
+          "linePrice": "598",
+          "goodCommentsShare": "99%"
+        },
+        {
+          "productType": "0",
+          "id": "34093",
+          "name": "搜狗出品 糖猫词典笔  随扫随译扫出好成绩",
+          "desc": "随扫随译扫出好成绩",
+          "img": "//mall01.sogoucdn.com/image/2020/06/02/20200602170503_4537.png",
+          "label": "学英语神器",
+          "tagPos": "center",
+          "color": "",
+          "price": "799",
+          "linePrice": "799",
+          "goodCommentsShare": "98%"
+        },
+        {
+          "productType": "0",
+          "id": "31269",
+          "name": "搜狗AI录音笔S1 终身免费转写",
+          "desc": "9种语言离线翻译",
+          "img": "//mall01.sogoucdn.com/image/2020/02/11/20200211202500_2861.jpg",
+          "label": "终身免费转写",
+          "tagPos": "center",
+          "color": "",
+          "price": "2698",
+          "linePrice": "2698",
+          "goodCommentsShare": "100%"
+        },
+        {
+          "productType": "0",
+          "id": "24823",
+          "name": "糖猫JOY2大嘴猴联名款",
+          "desc": "4G视频通话 AI智能问答",
+          "img": "//mall02.sogoucdn.com/image/2019/07/25/20190725113136_1703.jpg",
+          "label": "个性爆款",
+          "tagPos": "center",
+          "color": "",
+          "price": "319",
+          "linePrice": "379",
+          "goodCommentsShare": "98%"
+        },
+        {
+          "productType": "0",
+          "id": "20122",
+          "name": "糖猫JOY2",
+          "desc": "能学口语的儿童电话手表",
+          "img": "//mall02.sogoucdn.com/image/2019/12/18/20191218113050_2695.jpg",
+          "label": "立减60元",
+          "tagPos": "left",
+          "color": "",
+          "price": "319",
+          "linePrice": "379",
+          "goodCommentsShare": "98%"
+        }
+      ]
+    },
+    {
+      "template": "imgs2",
+      "title": "企业&送礼",
+      "color": "",
+      "show": "weapp",
+      "list": [
+        {
+          "title": "送礼",
+          "img": "//mall03.sogoucdn.com/image/2020/06/11/20200611173611_4682.png",
+          "link": "/pages/gift/home?activity_id= 414673578336714752"
+        },
+        {
+          "title": "企业团购",
+          "img": "//mall01.sogoucdn.com/image/2020/06/11/20200611173544_4681.png",
+          "link": "/pages/activity/ltc"
+        }
+      ]
+    },
+    {
+      "template": "product-double-B",
+      "title": "智能AI办公",
+      "list": [
+        {
+          "productType": "1",
+          "id": "jd_67672850940",
+          "name": "华为路由AX3",
+          "desc": "双核千兆路由器",
+          "img": "//mall02.sogoucdn.com/image/2020/09/28/20200928113942_5627.jpg",
+          "label": "",
+          "tagPos": "center",
+          "color": "",
+          "price": "249",
+          "linePrice": "239",
+          "goodCommentsShare": "97%"
+        },
+        {
+          "productType": "1",
+          "id": "jd_100001691967",
+          "name": "罗技（G）主宰者游戏鼠标",
+          "desc": "主宰者有线鼠标 游戏鼠标 HERO引擎 RGB鼠标 电竞鼠标 16000DPI",
+          "img": "//mall02.sogoucdn.com/image/2020/09/21/20200921193836_5421.png",
+          "label": "",
+          "tagPos": "center",
+          "color": "",
+          "price": "338",
+          "linePrice": "338",
+          "goodCommentsShare": "98%"
+        },
+        {
+          "productType": "1",
+          "id": "jd_100002937499",
+          "name": "希捷(Seagate) 移动硬盘",
+          "desc": "金属外壳 兼容Mac",
+          "img": "//mall01.sogoucdn.com/image/2020/09/10/20200910151706_5334.png",
+          "label": "",
+          "tagPos": "center",
+          "color": "",
+          "price": "449",
+          "linePrice": "449",
+          "goodCommentsShare": "99%"
+        },
+        {
+          "productType": "1",
+          "id": "jd_100001862785",
+          "name": "小米 投影仪",
+          "desc": "1080P全高清 开机即对焦",
+          "img": "//mall01.sogoucdn.com/image/2020/08/31/20200831115638_5277.jpg",
+          "label": "",
+          "tagPos": "center",
+          "color": "",
+          "price": "2699",
+          "linePrice": "2699",
+          "goodCommentsShare": "96%"
+        }
+      ]
+    }
+  ],
+  "cateHome": [
+    {
+      "categoryId": "57",
+      "categoryName": "智能产品",
+      "categoryImage": "//mall01.sogoucdn.com/image/2019/01/10/20190110163819_4301.png",
+      "productList": [
+        {
+          "productId": "35372",
+          "name": "搜狗AI录音笔E2",
+          "image": "//mall03.sogoucdn.com/image/2020/10/20/20201020184617_5652.jpg",
+          "salePrice": "1998",
+          "linePrice": "1998"
+        },
+        {
+          "productId": "31269",
+          "name": "搜狗AI录音笔S1",
+          "image": "//mall02.sogoucdn.com/image/2020/02/13/20200213174524_2987.jpg",
+          "salePrice": "2698",
+          "linePrice": "2698"
+        },
+        {
+          "productId": "31408",
+          "name": "C1 Pro故宫联名款",
+          "image": "//mall02.sogoucdn.com/image/2020/02/13/20200213174402_2986.jpg",
+          "salePrice": "648",
+          "linePrice": "648"
+        },
+        {
+          "productId": "31372",
+          "name": "搜狗AI录音笔E1",
+          "image": "//mall02.sogoucdn.com/image/2020/02/13/20200213174655_2988.jpg",
+          "salePrice": "1298",
+          "linePrice": "1298"
+        },
+        {
+          "productId": "29153",
+          "name": "搜狗AI录音笔C1 Pro",
+          "image": "//mall03.sogoucdn.com/image/2019/11/28/20191128114507_2430.jpg",
+          "salePrice": "598",
+          "linePrice": "598"
+        },
+        {
+          "productId": "26028",
+          "name": "搜狗AI录音笔C1炫彩版",
+          "image": "//mall01.sogoucdn.com/image/2019/11/27/20191127160313_2423.jpg",
+          "salePrice": "398",
+          "linePrice": "398"
+        },
+        {
+          "productId": "17658",
+          "name": "搜狗智能录音笔C1",
+          "image": "//mall01.sogoucdn.com/image/2019/10/04/20191004211024_2027.jpeg",
+          "salePrice": "398",
+          "linePrice": "398"
+        },
+        {
+          "productId": "17125",
+          "name": "搜狗翻译宝Pro",
+          "image": "//mall02.sogoucdn.com/image/2018/12/27/20181227141313_4287.png",
+          "salePrice": "2499",
+          "linePrice": "2499"
+        },
+        {
+          "productId": "47",
+          "name": "搜狗录音翻译笔",
+          "image": "//mall01.sogoucdn.com/image/2019/11/27/20191127160546_2424.jpg",
+          "salePrice": "398",
+          "linePrice": "398"
+        }
+      ]
+    },
+    {
+      "categoryId": "59",
+      "categoryName": "糖猫产品",
+      "categoryImage": "//mall02.sogoucdn.com/image/2019/01/10/20190110163906_4302.png",
+      "productList": [
+        {
+          "productId": "34093",
+          "name": "糖猫词典笔",
+          "image": "//mall02.sogoucdn.com/image/2020/06/02/20200602171546_4539.jpg",
+          "salePrice": "799",
+          "linePrice": "799"
+        },
+        {
+          "productId": "33946",
+          "name": "糖猫A10",
+          "image": "//mall02.sogoucdn.com/image/2020/05/11/20200511110351_4135.jpg",
+          "salePrice": "399",
+          "linePrice": "399"
+        },
+        {
+          "productId": "33735",
+          "name": "搜狗糖猫K1",
+          "image": "//mall03.sogoucdn.com/image/2020/04/09/20200409110120_3514.jpg",
+          "salePrice": "499",
+          "linePrice": "499"
+        },
+        {
+          "productId": "25885",
+          "name": "糖猫Y1",
+          "image": "//mall01.sogoucdn.com/image/2019/11/27/20191127161213_2426.jpg",
+          "salePrice": "598",
+          "linePrice": "598"
+        },
+        {
+          "productId": "34634",
+          "name": "糖猫A10 Plus",
+          "image": "//mall02.sogoucdn.com/image/2020/07/27/20200727135455_4940.jpg",
+          "salePrice": "599",
+          "linePrice": "599"
+        },
+        {
+          "productId": "29302",
+          "name": "糖猫Y1大嘴猴联名款",
+          "image": "//mall03.sogoucdn.com/image/2019/12/13/20191213135638_2630.jpg",
+          "salePrice": "598",
+          "linePrice": "598"
+        },
+        {
+          "productId": "34556",
+          "name": "糖猫T10",
+          "image": "//mall01.sogoucdn.com/image/2020/07/27/20200727143816_4949.jpg",
+          "salePrice": "699",
+          "linePrice": "699"
+        },
+        {
+          "productId": "21384",
+          "name": "糖猫Plus2",
+          "image": "//mall03.sogoucdn.com/image/2019/11/27/20191127161037_2425.jpg",
+          "salePrice": "199",
+          "linePrice": "199"
+        },
+        {
+          "productId": "24823",
+          "name": "JOY2大嘴猴联名款",
+          "image": "//mall03.sogoucdn.com/image/2019/11/27/20191127161830_2427.jpg",
+          "salePrice": "319",
+          "linePrice": "319"
+        },
+        {
+          "productId": "20122",
+          "name": "糖猫JOY2",
+          "image": "//mall01.sogoucdn.com/image/2019/11/27/20191127161944_2428.jpg",
+          "salePrice": "319",
+          "linePrice": "319"
+        },
+        {
+          "productId": "12180",
+          "name": "糖猫M2",
+          "image": "//mall03.sogoucdn.com/image/2018/12/21/20181221190233_4185.png",
+          "salePrice": "998",
+          "linePrice": "998"
+        }
+      ]
+    },
+    {
+      "categoryId": "61",
+      "categoryName": "配件",
+      "categoryImage": "//mall01.sogoucdn.com/image/2019/01/10/20190110163932_4303.png",
+      "productList": [
+        {
+          "productId": "13999",
+          "name": "糖猫学生儿童小书包",
+          "image": "//mall01.sogoucdn.com/image/2018/12/24/20181224120137_4241.png",
+          "salePrice": "99",
+          "linePrice": "99"
+        },
+        {
+          "productId": "14119",
+          "name": "T2/basic专用原装表带",
+          "image": "//mall01.sogoucdn.com/image/2018/09/04/20180904105255_3809.png",
+          "salePrice": "80",
+          "linePrice": "80"
+        },
+        {
+          "productId": "14500",
+          "name": "E1好友版专用表扣",
+          "image": "//mall02.sogoucdn.com/image/2018/12/24/20181224120253_4244.png",
+          "salePrice": "20",
+          "linePrice": "20"
+        },
+        {
+          "productId": "52",
+          "name": "Color专用表带",
+          "image": "//mall02.sogoucdn.com/image/2018/12/24/20181224120209_4242.png",
+          "salePrice": "59",
+          "linePrice": "59"
+        },
+        {
+          "productId": "14395",
+          "name": "Basic专用表扣",
+          "image": "//mall02.sogoucdn.com/image/2018/12/24/20181224134504_4270.jpg",
+          "salePrice": "25",
+          "linePrice": "25"
+        }
+      ]
+    }
+  ]
+}
