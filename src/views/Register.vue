@@ -63,18 +63,9 @@ export default {
       } else if (this.text3.length < 6) {
         Toast('密码不能少于6位')
       } else {
-        axios.get(`http://localhost:7777/users?name=${this.text1}`).then(res => {
-          if (res.data.length !== 0) {
-            Toast('用户名已注册')
-          } else {
-            axios.post('http://localhost:7777/users', {
-              name: this.text1,
-              password: this.text3
-            }).then(() => {
-              this.$router.push('/login')
-              Toast('注册成功')
-            })
-          }
+        const obj = { name: this.text1, password: this.text3 }
+        axios.post('http://localhost:3003/customers/register', obj).then(res => {
+          Toast(res.data)
         })
       }
     }

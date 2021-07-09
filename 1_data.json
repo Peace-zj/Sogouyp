@@ -1,29 +1,39 @@
 {
   "users": [
     {
-      "id": 1,
+      "id":1,
       "name": "小明",
-      "password": "123456"
+      "password": "123456",
+      "tel":13343558897,
+      "email":"asdhakshdd@163.com"
     },
     {
+      "id":2,
       "name": "小白",
       "password": "qwerty",
-      "id": 4
+      "tel":18302558827,
+      "email":"ryruiashdd@163.com"
     },
     {
+      "id":3,
       "name": "赵四",
       "password": "asdasd",
-      "id": 5
+      "tel":13643533697,
+      "email":"auuershdd@163.com"
     },
     {
+      "id":4,
       "name": "张三",
       "password": "123123",
-      "id": 6
+      "tel":13840553897,
+      "email":"aszxcbkshdd@163.com"
     },
     {
+      "id":5,
       "name": "小周",
       "password": "zxczxc",
-      "id": 7
+      "tel":15143558897,
+      "email":"asdadklhdd@163.com"
     }
   ],
   "mods": [

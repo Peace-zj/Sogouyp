@@ -2,7 +2,7 @@ import axios from 'axios'
 import { Toast } from 'vant'
 
 const http = axios.create({
-  timeout: 10000
+  timeout: 20000
   // headers: { 'X-Client-Info': '{"a":"3000","ch":"1002","v":"5.0.4","e":"1604496075983972712546306","bc":"310100"}' }
 })
 // Add a request interceptor

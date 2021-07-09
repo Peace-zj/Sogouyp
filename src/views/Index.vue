@@ -113,7 +113,7 @@
                 <h1>查找附近的体验店</h1>
                 <div>
                     <img src="//img01.sogoucdn.com/app/a/201029/store.png" alt="">
-                    <button>800 + 线下门店为您服务 > </button>
+                    <router-link tag="button" to="/h5/pages/store-map/index">800 + 线下门店为您服务 ></router-link>
                 </div>
             </div>
             <div class="foot">

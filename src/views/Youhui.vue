@@ -14,7 +14,7 @@
                     <a href="#head"><van-icon name="back-top" size='0.26rem' color="#fff" class="icons"/></a>
                 </div>
             <ul v-show="current===24">
-                <li v-for="(data,index) in list1" :key="index+'r'" @click="Jump(data.skuId)">
+                <li v-for="(data,index) in list1" :key="index" @click="Jump(data.skuId)">
                     <div class="img"><img :src="data.image"></div>
                     <div class="desc">
                         <p class="name">{{data.name}}</p>
@@ -25,7 +25,7 @@
                 </li>
             </ul>
             <ul v-show="current===27">
-                <li v-for="(data,index) in list2" :key="index+'e'" @click="Jump(data.skuId)">
+                <li v-for="(data,index) in list2" :key="index" @click="Jump(data.skuId)">
                     <div class="img"><img :src="data.image"></div>
                     <div class="desc">
                         <p class="name">{{data.name}}</p>
@@ -36,7 +36,7 @@
                 </li>
             </ul>
             <ul v-show="current===25">
-                <li v-for="(data,index) in list3" :key="index+'s'" @click="Jump(data.skuId)">
+                <li v-for="(data,index) in list3" :key="index" @click="Jump(data.skuId)">
                     <div class="img"><img :src="data.image"></div>
                     <div class="desc">
                         <p class="name">{{data.name}}</p>

@@ -45,6 +45,29 @@ const routes = [
     component: () => import('@/views/Classify')
   },
   {
+    path: '/h5/pages/store-map/index',
+    component: () => import('@/views/city/City')
+  },
+  {
+    path: '/h5/pages/store-map/city',
+    component: () => import('@/views/city/Cities')
+  },
+  {
+    path: '/neworder',
+    name: 'neworder',
+    component: () => import('@/views/order/Order')
+  },
+  {
+    path: '/address',
+    name: 'address',
+    component: () => import('@/views/order/Address')
+  },
+  {
+    path: '/edit',
+    name: 'edit',
+    component: () => import('@/views/order/Edit')
+  },
+  {
     path: '*',
     redirect: '/h5/pages/home/index'
   }

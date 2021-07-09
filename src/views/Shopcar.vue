@@ -19,7 +19,7 @@
                     <button @click="jumptoIndex()">去逛逛</button>
                 </div>
                 <ul class="sec" v-show="list.length">
-                    <li v-for="(data,index) in list" :key="data.productId" >
+                    <li v-for="(data,index) in list" :key="data._id" >
                         <div class="outer l single" @click="singleCheck(index)">
                             <div class="inter" v-show="data.selected" ></div>
                         </div>
@@ -38,7 +38,7 @@
             <div>
               <nfooter></nfooter>
             </div>
-            <div class="final">没有更多了</div>
+            <!-- <div class="final">没有更多了</div> -->
         </div>
         <div class="sub">
             <div class="outer l" @click="allCheck()">
@@ -46,8 +46,8 @@
             </div>
             <div class="l allin">全选</div>
             <div v-if="ordShow">
-                <button>结算</button>
-                <p>￥{{sum}}</p>
+                <button @click="order()">结算</button>
+                <p>￥{{sum}}.00</p>
                 <span>合计：</span>
             </div>
             <button class="del" v-if="delShow" @click="del()">删除</button>
@@ -55,15 +55,18 @@
     </div>
 </template>
 <script>
-import { obj } from '@/views/category/Selection'
+// import { obj } from '@/views/category/Selection'
 import nfooter from '@/views/shopcar/foot'
 import http from '@/util/http'
+import axios from 'axios'
 import carHeader from '@/views/header/head'
 import Vue from 'vue'
-import { SubmitBar, Icon } from 'vant'
+import { SubmitBar, Icon, Toast } from 'vant'
+import { mapMutations, mapState } from 'vuex'
+
 // import { mapState, mapMutations } from 'vuex'
-var lists = []
-Vue.use(SubmitBar).use(Icon)
+// var lists = []
+Vue.use(SubmitBar).use(Icon).use(Toast)
 export default {
   data () {
     return {
@@ -93,41 +96,50 @@ export default {
     }).then(res => {
       this.recList = res.data.data.pageList
     })
-    if (obj != null) {
-      var newObj = {}
-      for (var attr in obj) {
-        newObj[attr] = obj[attr]
-        // obj = {}
-      }
+    const product = {}
+    product.user = localStorage.getItem('username')
+    axios.post('http://localhost:3003/carlists/msg', product).then(res => {
+      console.log(res.data)
+      this.list = res.data
+    })
+    // if (obj != null) {
+    //   var newObj = {}
+    //   for (var attr in obj) {
+    //     newObj[attr] = obj[attr]
+    //     // obj = {}
+    //   }
 
-      if (newObj.productId !== 0) {
-        if (lists.length) {
-          for (var i = 0; i < lists.length; i++) {
-            if (lists[i].productId === newObj.productId) {
-              // console.log(lists[i].productId, newObj.productId, lists)
-              lists[i].productNum += newObj.productNum
-              // console.log('id同，颜色同')
-              break
-            } else {
-              if (i === lists.length - 1) {
-                lists.push(newObj)
-                break
-              }
-              // console.log('id不同')
-            }
-          }
-        } else {
-          lists.push(newObj)
-          // console.log('xinde ')
-        }
+    //   if (newObj.productId !== 0) {
+    //     if (lists.length) {
+    //       for (var i = 0; i < lists.length; i++) {
+    //         if (lists[i].productId === newObj.productId) {
+    //           // console.log(lists[i].productId, newObj.productId, lists)
+    //           lists[i].productNum += newObj.productNum
+    //           // console.log('id同，颜色同')
+    //           axios.post('http://localhost:3003/carlists/editnum', lists[i]).then(res => {
+    //             console.log(res.data)
+    //           })
+    //           break
+    //         } else {
+    //           if (i === lists.length - 1) {
+    //             lists.push(newObj)
+    //             break
+    //           }
+    //           // console.log('id不同')
+    //         }
+    //       }
+    //     } else {
+    //       lists.push(newObj)
+    //       // console.log('xinde ')
+    //     }
 
-        obj.productId = 0
-      }
-      //
-      this.list = lists
+    //     obj.productId = 0
+    //   }
+    //   //
+    //   this.list = lists
 
-      // console.log(obj)
-    }
+    //   // console.log(obj)
+    // }
     // http({
 
     //   url: '/heihei/api/user/cart/list_product',
@@ -144,6 +156,7 @@ export default {
   },
 
   methods: {
+    ...mapMutations(['setShopList']),
     edt () {
       this.ordShow = !this.ordShow
       this.delShow = !this.delShow
@@ -152,13 +165,31 @@ export default {
       // console.log(this.shopCarList)
     },
     del () {
+      axios.post('http://localhost:3003/carlists/delelists', this.selList).then((res) => {
+        console.log(res.data)
+      })
       this.list = this.list.filter(item => item.selected === false)
-      lists = this.list
-      obj.productId = 0
-      obj.selected = false
       this.selList = this.list.filter(item => item.selected === true)
       if (!this.list.length) {
         this.notShow = false
+      }
+      // lists = this.list
+      // obj.productId = 0
+      // obj.selected = false
+    },
+    order () {
+      const code = Math.floor(Math.random() * 100000000000 + 100000000000)
+      this.selList[0].code = code
+      if (this.selList.length) {
+        axios.post('http://localhost:3003/unsubmitteds/newpdts', this.selList).then(res => {
+          console.log(res.data)
+        })
+        axios.post('http://localhost:3003/carlists/delelists', this.selList).then(res => {
+          console.log(res.data)
+        })
+        this.$router.push({ name: 'neworder', params: { code: code } })
+      } else {
+        Toast('您还未选择商品')
       }
     },
 
@@ -177,6 +208,8 @@ export default {
     singleCheck (index) {
       this.list[index].selected = !this.list[index].selected
       this.selList = this.list.filter(item => item.selected === true)
+      this.setShopList(this.selList)
+
       if (this.judge()) {
         this.notShow = true
       } else {
@@ -200,6 +233,7 @@ export default {
     nfooter
   },
   computed: {
+    ...mapState(['shoplist']),
     sum () {
       var res = 0
       for (var i = 0; i < this.selList.length; i++) {
@@ -226,8 +260,8 @@ export default {
         width: .1rem;
         height: .1rem;
         position: absolute;
-        left:25%;
-        top:25%;
+        left:23%;
+        top:23%;
         border-radius: 50%;
         background-color: red;
     }
@@ -436,7 +470,7 @@ export default {
             line-height: .5rem;
             margin-right:.2rem;
             color:red;
-            width: .4rem;
+            width: .5rem;
         }
         span{
             display: block;

@@ -44,7 +44,7 @@ export default {
     loginHeader
   },
   methods: {
-    ...mapMutations(['showAsides', 'hideAsides']),
+    ...mapMutations(['showAsides', 'hideAsides', 'setUsername']),
     // 改变密码类型
     handlepw () {
       this.eyeOpen = !this.eyeOpen
@@ -64,10 +64,11 @@ export default {
     },
     Login () {
       if (this.text1 && this.pword) {
-        axios.get(`http://localhost:7777/users?name=${this.text1}&password=${this.pword}`).then(res => {
+        axios.get(`http://localhost:3003/customers/login?name=${this.text1}&password=${this.pword}`).then(res => {
           if (res.data.length !== 0) {
             localStorage.setItem('username', this.text1)
             localStorage.setItem('password', this.pword)
+            this.setUsername(2)
             this.$router.push('/center/home')
           } else {
             Toast('用户名或密码错误')

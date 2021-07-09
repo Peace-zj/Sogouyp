@@ -44,8 +44,9 @@
   </div>
 </template>
 <script>
-// import { mapState } from "vuex"
+import { mapMutations, mapState } from 'vuex'
 import http from '@/util/http'
+import axios from 'axios'
 export var obj = {
   productId: 0,
   productNum: 1,
@@ -103,7 +104,11 @@ export default {
       this.imgUrl = this.ImageList[0]
     })
   },
+  computed: {
+    ...mapState(['product'])
+  },
   methods: {
+    ...mapMutations(['setProduct']),
     // ...mapActions(['getShopCarList']),
     isShowfor () {
       this.$emit('selecshow')
@@ -127,7 +132,12 @@ export default {
       obj.productId = this.id
       obj.price = this.price
       obj.skuName = this.skuName
-      this.$router.push('/shopcar')
+      this.setProduct(obj)
+      obj.user = localStorage.getItem('username')
+      axios.post('http://localhost:3003/carlists/lists', obj).then(res => {
+        // console.log(res.data)
+        this.$router.push('/shopcar')
+      })
     }
   }
 }

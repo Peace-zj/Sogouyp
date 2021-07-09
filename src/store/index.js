@@ -5,8 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    isAsidesShow: true
-    // list: []
+    isAsidesShow: true,
+    cityName: '北京市',
+    cityData: [],
+    shoplist: [],
+    product: {},
+    username: 1
   },
   mutations: {
     showAsides (state) {
@@ -14,6 +18,25 @@ export default new Vuex.Store({
     },
     hideAsides (state) {
       state.isAsidesShow = false
+    },
+    setCitydata (state, city) {
+      state.cityData = city
+    },
+    setCityName (state, name) {
+      state.cityName = name
+    },
+    setUsername (state, name) {
+      state.username = name
+    },
+    setShopList (state, list) {
+      state.shoplist = list
+    },
+    setProduct (state, pdt) {
+      // state.product = pdt
+      for (var attr in pdt) {
+        state.product[attr] = pdt[attr]
+        // obj = {}
+      }
     }
     // setList (state, data) {
     //   state.list = [...state.list, data]
@@ -21,15 +44,14 @@ export default new Vuex.Store({
     // setList2 (state, data) {
 
     // }
+  },
+  actions: {
+    getCityData (store) {
+      return fetch('../../../city.json').then(res => res.json()).then(res => {
+        // console.log(res)
+        store.commit('setCitydata', res.rows)
+      })
+    }
   }
-  // actions: {
-  //   // getShopCarList (store, id) {
-  //   //   return http({
-  //   //     url: `/heihei/api/product/sku/sku_stock_detail?c=h5&s=20000&t=1606553777861&v=1.0&product_id=${id}&stock_type=1`
-  //   //   }).then(res => {
-  //   //     // console.log(res.data.data.skuMap)
-  //   //     store.commit('setShopCarData', res.data.data.skuMap)
-  //   //   })
-  //   }
 
 })
