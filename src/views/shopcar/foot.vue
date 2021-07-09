@@ -26,7 +26,7 @@ export default {
   },
   mounted () {
     http({
-      url: '/heihei/api/product/product/product_list?c=h5&s=20000&t=1605257682140&v=1.0&category_id=0&sort_field=1&sort_order=2&pn=1&ps=4'
+      url: '/sgsg/api/product/product/product_list?c=h5&s=20000&t=1605257682140&v=1.0&category_id=0&sort_field=1&sort_order=2&pn=1&ps=4'
     }).then(res => {
       this.recList = res.data.data.pageList
     })

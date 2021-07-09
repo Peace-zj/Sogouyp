@@ -1,6 +1,6 @@
 <template>
 <van-index-bar :index-list="computedList" @select="dian">
-    <div class="zz" v-for="data in list" :key="data.type">
+    <div class="lists" v-for="data in list" :key="data.type">
             <van-index-anchor :index="data.type">{{data.type}}</van-index-anchor>
 
             <van-cell v-for="item in data.list" :key="item.adcode" :title="item.name" @click="hank(item.name)" />
@@ -33,8 +33,6 @@ export default {
       this.getCityData().then(res => {
         this.list = this.filterList(this.cityData)
       })
-      // this.$router.push('/h5/pages/store-map/index')
-      // return
     } else {
       this.list = this.filterList(this.cityData)
     }
@@ -69,7 +67,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.zz{
+.lists{
     background: #f4f4f4;
 }
 </style>

@@ -38,7 +38,7 @@ export default {
   mounted () {
     http({
       url:
-        '/heihei/json/mobile/cate-home.json?c=h5&s=20000&t=1607857423507&v=1.0'
+        '/sgsg/json/mobile/cate-home.json?c=h5&s=20000&t=1607857423507&v=1.0'
     }).then((res) => {
       // console.log(res.data.data.cateHome)
       this.list = res.data.data.cateHome

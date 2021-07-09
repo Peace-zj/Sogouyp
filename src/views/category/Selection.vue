@@ -74,10 +74,9 @@ export default {
   },
   mounted () {
     http({
-      url: `/heihei/api/product/sku/sku_stock_detail?c=h5&s=20000&t=1606553777861&v=1.0&product_id=${this.$route.query.id}&stock_type=1`
+      url: `/sgsg/api/product/sku/sku_stock_detail?c=h5&s=20000&t=1606553777861&v=1.0&product_id=${this.$route.query.id}&stock_type=1`
     }).then(res => {
       // console.log(res.data.data.skuMap)
-      // store.commit('setShopCarData', res.data.data.skuMap)
       this.shopCarList = res.data.data.skuMap
       for (var attr in this.shopCarList) {
         this.ColorList.push(this.shopCarList[attr].sku.skuName)
@@ -93,12 +92,11 @@ export default {
     })
 
     // console.log(this.CarList)
-    // bus.$emit
 
     // console.log(this.ColorList)
 
     http({
-      url: `/heihei/api/product/product/product_detail?c=h5&s=20000&t=1606613408539&v=1.0&product_id=${this.$route.query.id}`
+      url: `/sgsg/api/product/product/product_detail?c=h5&s=20000&t=1606613408539&v=1.0&product_id=${this.$route.query.id}`
     }).then(res => {
       this.ImageList.push(res.data.data.product.image[0])
       this.imgUrl = this.ImageList[0]

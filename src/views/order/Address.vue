@@ -67,18 +67,6 @@ export default {
         console.log(res)
         this.$router.push('/edit')
       })
-    },
-    onChangeDetail (val) {
-      // if (val) {
-      //   this.searchResult = [
-      //     {
-      //       name: '黄龙万科中心',
-      //       address: '杭州市西湖区'
-      //     }
-      //   ]
-      // } else {
-      //   this.searchResult = []
-      // }
     }
 
   }

@@ -105,28 +105,28 @@ export default {
   },
   mounted () {
     http({
-      url: '/heihei/api/union/product/elite/elite_list?c=h5&s=20000&t=1606203338365&v=1.0'
+      url: '/sgsg/api/union/product/elite/elite_list?c=h5&s=20000&t=1606203338365&v=1.0'
     }).then(res => {
       this.kinds = res.data.data.eliteList
       this.current = this.kinds[0].eliteId
     })
     http({
-      url: '/heihei/api/union/product/product_list?c=h5&s=20000&t=1606203338495&v=1.0&eliteId=24&pn=1&ps=20'
+      url: '/sgsg/api/union/product/product_list?c=h5&s=20000&t=1606203338495&v=1.0&eliteId=24&pn=1&ps=20'
     }).then(res => {
       this.list1 = res.data.data.pageList
     })
     http({
-      url: '/heihei/api/union/product/product_list?c=h5&s=20000&t=1606208767165&v=1.0&eliteId=27&pn=1&ps=20'
+      url: '/sgsg/api/union/product/product_list?c=h5&s=20000&t=1606208767165&v=1.0&eliteId=27&pn=1&ps=20'
     }).then(res => {
       this.list2 = res.data.data.pageList
     })
     http({
-      url: '/heihei/api/union/product/product_list?c=h5&s=20000&t=1606208768967&v=1.0&eliteId=25&pn=1&ps=20'
+      url: '/sgsg/api/union/product/product_list?c=h5&s=20000&t=1606208768967&v=1.0&eliteId=25&pn=1&ps=20'
     }).then(res => {
       this.list3 = res.data.data.pageList
     })
     http({
-      url: '/heihei/api/union/product/product_list?c=h5&s=20000&t=1606208770497&v=1.0&eliteId=26&pn=1&ps=20'
+      url: '/sgsg/api/union/product/product_list?c=h5&s=20000&t=1606208770497&v=1.0&eliteId=26&pn=1&ps=20'
     }).then(res => {
       this.list4 = res.data.data.pageList
     })

@@ -21,7 +21,6 @@
 </div>
 </template>
 <script>
-// import nodemailer from 'nodemailer'
 import axios from 'axios'
 import Vue from 'vue'
 import { Icon, Toast } from 'vant'

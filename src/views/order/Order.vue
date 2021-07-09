@@ -99,9 +99,6 @@ export default {
       this.shoplist[0].tel = this.list[0].tel
       this.shoplist[0].address = this.list[0].address
       // console.log(this.shoplist)
-      // this.$nextTick(() => {
-      //
-      // })
       axios.post('http://localhost:3003/unsubmitteds/delunsbted', this.shoplist).then(res => {
         console.log(res.data)
       })
@@ -110,9 +107,6 @@ export default {
         console.log(this.shoplist)
       })
       this.$router.push('/shopcar')
-      // axios.post('http://localhost:3003/carlists/delelists', this.list).then((res) => {
-      //   console.log(res.data)
-      // })
     },
     adslist () {
       this.$router.push({ name: 'edit', params: { code: this.code.code } })

@@ -54,10 +54,8 @@
     </div>
 </template>
 <script>
-// import BetterScroll from 'better-scroll'
 import Vue from 'vue'
 import { Icon, Toast } from 'vant'
-// import http from '@/util/http'
 import centerHead from '@/views/header/head'
 Vue.use(Icon)
 export default {
@@ -80,12 +78,6 @@ export default {
   },
   mounted () {
     this.name = localStorage.getItem('username')
-    // new BetterScroll("#bo",{
-    //     scrollbar : {
-    //         fade : true,
-    //     },
-    //     click : true
-    // })
   }
 }
 </script>

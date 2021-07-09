@@ -106,7 +106,7 @@ export default {
   mounted () {
     this.hideAsides()
     http({
-      url: `/heihei/api/product/product/product_detail?c=h5&s=20000&t=1606531073107&v=1.0&product_id=${this.$route.query.id}`
+      url: `/sgsg/api/product/product/product_detail?c=h5&s=20000&t=1606531073107&v=1.0&product_id=${this.$route.query.id}`
     }).then(res => {
       // console.log(this.$route)
 
@@ -115,12 +115,12 @@ export default {
       this.pcParamDesc = this.list.product.pcParamDesc
     })
     http({
-      url: `/heihei/api/product/sku/sku_stock_detail?c=h5&s=20000&t=1606531075644&v=1.0&product_id=${this.$route.query.id}&stock_type=1`
+      url: `/sgsg/api/product/sku/sku_stock_detail?c=h5&s=20000&t=1606531075644&v=1.0&product_id=${this.$route.query.id}&stock_type=1`
     }).then(res => {
       this.price = res.data.data.skuLinePriceRange[0] / 100
     })
     http({
-      url: `/heihei/api/comment/list?c=h5&s=20000&t=1606542095535&v=1.0&productId=${this.$route.query.id}&pn=1&ps=1`
+      url: `/sgsg/api/comment/list?c=h5&s=20000&t=1606542095535&v=1.0&productId=${this.$route.query.id}&pn=1&ps=1`
     }).then(res => {
       this.message = res.data.data
       if (this.message.pageList[0]) {

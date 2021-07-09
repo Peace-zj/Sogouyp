@@ -168,9 +168,6 @@ export default {
   },
   methods: {
     jumpTo (link) {
-    //   if(link.match(/list/)){
-
-      //   }
       const reg1 = /jd-union/
       const reg2 = /cate-list\?id=[0-9]+/
       const reg3 = /cate-home/
@@ -199,19 +196,8 @@ export default {
     }
   },
   mounted () {
-    // http({
-    //   url: 'http://localhost:7777/mods'
-    // }).then(res => {
-    // //   console.log(res.data)
-    //   this.imageList = res.data[0].list
-    //   this.catalogList = res.data[1].list
-    //   this.newList = res.data[2].list
-    //   this.barginList = res.data[3].list
-    //   this.giftList = res.data[4].list
-    //   this.officeList = res.data[5].list
-    // })
     http({
-      url: '/heihei/json/mobile/new-home.json?c=h5&s=20000&t=1605940709616&v=1.0&autoHandle=false'
+      url: '/sgsg/json/mobile/new-home.json?c=h5&s=20000&t=1605940709616&v=1.0&autoHandle=false'
     }).then(res => {
       // console.log(res.data)
       this.imageList = res.data.data.mods[0].list

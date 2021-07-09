@@ -38,7 +38,6 @@
             <div>
               <nfooter></nfooter>
             </div>
-            <!-- <div class="final">没有更多了</div> -->
         </div>
         <div class="sub">
             <div class="outer l" @click="allCheck()">
@@ -55,7 +54,6 @@
     </div>
 </template>
 <script>
-// import { obj } from '@/views/category/Selection'
 import nfooter from '@/views/shopcar/foot'
 import http from '@/util/http'
 import axios from 'axios'
@@ -64,8 +62,6 @@ import Vue from 'vue'
 import { SubmitBar, Icon, Toast } from 'vant'
 import { mapMutations, mapState } from 'vuex'
 
-// import { mapState, mapMutations } from 'vuex'
-// var lists = []
 Vue.use(SubmitBar).use(Icon).use(Toast)
 export default {
   data () {
@@ -82,17 +78,8 @@ export default {
     }
   },
   mounted () {
-    // const param = new URLSearchParams()
-    // param.append('c', 'h5')
-    // param.append('s', '20000')
-    // param.append('t', '1605267606318')
-    // param.append('v', '1.0')
-    // for(var attr in this.shopCarList){
-    //    this.list.push(this.shopCarList[attr].sku)
-    // }
-
     http({
-      url: '/heihei/api/product/product/product_list?c=h5&s=20000&t=1605257682140&v=1.0&category_id=0&sort_field=1&sort_order=2&pn=1&ps=4'
+      url: '/sgsg/api/product/product/product_list?c=h5&s=20000&t=1605257682140&v=1.0&category_id=0&sort_field=1&sort_order=2&pn=1&ps=4'
     }).then(res => {
       this.recList = res.data.data.pageList
     })
@@ -102,59 +89,7 @@ export default {
       console.log(res.data)
       this.list = res.data
     })
-    // if (obj != null) {
-    //   var newObj = {}
-    //   for (var attr in obj) {
-    //     newObj[attr] = obj[attr]
-    //     // obj = {}
-    //   }
-
-    //   if (newObj.productId !== 0) {
-    //     if (lists.length) {
-    //       for (var i = 0; i < lists.length; i++) {
-    //         if (lists[i].productId === newObj.productId) {
-    //           // console.log(lists[i].productId, newObj.productId, lists)
-    //           lists[i].productNum += newObj.productNum
-    //           // console.log('id同，颜色同')
-    //           axios.post('http://localhost:3003/carlists/editnum', lists[i]).then(res => {
-    //             console.log(res.data)
-    //           })
-    //           break
-    //         } else {
-    //           if (i === lists.length - 1) {
-    //             lists.push(newObj)
-    //             break
-    //           }
-    //           // console.log('id不同')
-    //         }
-    //       }
-    //     } else {
-    //       lists.push(newObj)
-    //       // console.log('xinde ')
-    //     }
-
-    //     obj.productId = 0
-    //   }
-    //   //
-    //   this.list = lists
-
-    //   // console.log(obj)
-    // }
-    // http({
-
-    //   url: '/heihei/api/user/cart/list_product',
-    //   method: 'post',
-    //   data: param,
-
-    //   headers: {
-    //     'Content-Type': 'application/x-www-form-urlencoded'
-    //   }
-    // }).then(res => {
-    //   this.list = res.data.data.productList
-    //   console.log(res.data.data.productList)
-    // })
   },
-
   methods: {
     ...mapMutations(['setShopList']),
     edt () {
@@ -173,9 +108,6 @@ export default {
       if (!this.list.length) {
         this.notShow = false
       }
-      // lists = this.list
-      // obj.productId = 0
-      // obj.selected = false
     },
     order () {
       const code = Math.floor(Math.random() * 100000000000 + 100000000000)

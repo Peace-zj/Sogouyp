@@ -1,10 +1,10 @@
 module.exports = {
   devServer: {
     proxy: {
-      '/heihei': {
+      '/sgsg': {
         target: 'https://mall.sogou.com',
         pathRewrite: {
-          '^/heihei': ''
+          '^/sgsg': ''
         },
         changeOrigin: true
       }

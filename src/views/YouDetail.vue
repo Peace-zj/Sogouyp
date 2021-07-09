@@ -42,7 +42,6 @@
 <script>
 import http from '@/util/http'
 import nswiper from '@/views/index/Swiper'
-// import selection from '@/views/category/Selection'
 import Vue from 'vue'
 import { Icon, Rate, GoodsAction, GoodsActionIcon, GoodsActionButton } from 'vant'
 import { mapMutations } from 'vuex'
@@ -55,12 +54,11 @@ export default {
   },
   components: {
     nswiper
-    // selection
   },
   mounted () {
     this.hideAsides()
     http({
-      url: `/heihei/api/union/product/product_detail?c=h5&s=20000&t=1607330838415&v=1.0&skuId=${this.$route.query.id}`
+      url: `/sgsg/api/union/product/product_detail?c=h5&s=20000&t=1607330838415&v=1.0&skuId=${this.$route.query.id}`
     }).then(res => {
       // console.log(this.$route.query)
       this.list = res.data.data
